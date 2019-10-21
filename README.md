@@ -1,0 +1,1 @@
+# snipcart-strapi-store
