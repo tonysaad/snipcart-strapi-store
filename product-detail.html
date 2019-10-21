@@ -17,6 +17,10 @@
 	<link rel="stylesheet" href="css/main.css">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="css/responsive.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="ZDJmMDNiMGQtNzlhOC00MWRkLWE2MTgtMGFmMjU1MTAxMWEzNjM3MDcyNjk2MDk3ODczNzM5" id="snipcart"></script>
+	<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 	<!-- main container of all the page elements -->
@@ -92,13 +96,13 @@
 													</div><!-- cart row end here -->
 													<!-- cart row total start here -->
 													<div class="cart-row-total">
-														<span class="mt-total">Sub Total</span>
-														<span class="mt-total-txt"><i class="fa fa-eur" aria-hidden="true"></i> 799,00</span>
+														<span class="mt-total">Sub Total (<span class="snipcart-items-count"></span>)</span>
+														<span class="mt-total-txt"><i class="fa fa-eur" aria-hidden="true"></i> <span class="snipcart-total-price"></span></span>
 													</div>
 													<!-- cart row total end here -->
 													<div class="cart-btn-row">
 														<a href="#" class="btn-type2">VIEW CART</a>
-														<a href="#" class="btn-type3">CHECKOUT</a>
+														<a href="#" class="btn-type3 snipcart-checkout">CHECKOUT</a>
 													</div>
 												</div><!-- mt side widget end here -->
 											</div>
@@ -508,7 +512,10 @@
 												<input type="number" id="qty" placeholder="1">
 											</div>
 											<div class="row-val">
-												<button type="submit">ADD TO CART</button>
+												<button type="submit" data-item-id="1" 
+												data-item-name="My first product" 
+												data-item-url="/" 
+												data-item-price="19.99">ADD TO CART</button>
 											</div>
 										</fieldset>
 									</form>
